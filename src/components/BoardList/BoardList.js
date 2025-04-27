@@ -2,6 +2,7 @@ import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { addBoard } from '../../features/board/boardSlice'
 import Column from './Column'
+import '../../styles/Kanban.css'
 
 const BoardList = () => {
     const dispatch = useDispatch()

@@ -1,0 +1,46 @@
+/* Kanban.css */
+
+/* Basic styling for the board */
+.board-layout {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.column {
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    width: 250px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.column h3 {
+    text-align: center;
+}
+
+/* Styling for the boards list */
+button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 5px 0;
+}
