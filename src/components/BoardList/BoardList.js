@@ -1,6 +1,7 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { addBoard } from '../../features/board/boardSlice'
+import Column from './Column'
 
 const BoardList = () => {
     const dispatch = useDispatch()
@@ -18,11 +19,16 @@ const BoardList = () => {
         <div>
             <h2>Boards</h2>
             <button onClick={handleAddBoard}>Add Board</button>
-            <ul>
-                {boards.map((board) => (
-                    <li key={board.id}>{board.name}</li>
-                ))}
-            </ul>
+            {boards.map((board) => (
+                <div key={board.id}>
+                    <h3>{board.name}</h3>
+                    <div className="board-layout">
+                        <Column columnName="To Do"></Column>
+                        <Column columnName="In Progress"></Column>
+                        <Column columnName="Done"></Column>
+                    </div>
+                </div>
+            ))}
         </div>
     )
 }
